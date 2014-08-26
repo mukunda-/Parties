@@ -1,0 +1,28 @@
+name: Parties
+main: com.mukunda.parties.Parties
+version: 0.0.1
+depend:
+#  - WorldEdit
+#  - Multiverse-Core
+#  - Multiverse-Inventories
+commands:
+  join:
+    description: Accept a party request
+    usage: /join
+    permission: parties.normal
+  invite:
+    description: Invite a player to your party.
+    usage: /invite <player>
+    permission: parties.normal
+  leave:
+    description: Leave your party.
+    usage: /leave
+    permission: parties.normal
+  leader:
+    description: Set party leader.
+    usage: /leader <player>
+    permission: parties.normal 
+permissions:
+  parties.normal:
+    description: Access to party commands.
+    default: true
