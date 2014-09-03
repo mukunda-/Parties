@@ -1,38 +1,24 @@
 package com.mukunda.parties;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.HashMap; 
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.OfflinePlayer;
+import org.bukkit.ChatColor; 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
+import org.bukkit.event.EventHandler; 
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityRegainHealthEvent;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerPortalEvent;
+import org.bukkit.event.entity.PlayerDeathEvent; 
+import org.bukkit.event.player.PlayerJoinEvent; 
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.metadata.FixedMetadataValue;
-import org.bukkit.metadata.MetadataValue;
-import org.bukkit.metadata.Metadatable;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scoreboard.DisplaySlot;
-import org.bukkit.scoreboard.Objective;
-import org.bukkit.scoreboard.Score;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.event.player.PlayerRespawnEvent; 
+import org.bukkit.plugin.java.JavaPlugin; 
 
 public class Parties extends JavaPlugin implements Listener {
 	
@@ -210,6 +196,7 @@ public class Parties extends JavaPlugin implements Listener {
 			player.sendMessage( "/invite <player> - Invite someone to your party." );
 			return;
 		}
+		@SuppressWarnings("deprecation")
 		Player target = Bukkit.getPlayer( args[0] );
 		if( target == null ) {
 			player.sendMessage( ChatColor.GOLD + "Player not found." );
@@ -248,6 +235,7 @@ public class Parties extends JavaPlugin implements Listener {
 			return;
 		}
 		
+		@SuppressWarnings("deprecation")
 		Player target = Bukkit.getPlayer( args[0] );
 		if( target == null ) {
 			player.sendMessage( ChatColor.GOLD + "Player not found." );
